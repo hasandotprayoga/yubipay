@@ -11,5 +11,10 @@
             "name": "Hasan Prayoga (Investor)",
             "email": "hasandotprayoga@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Yukbisnis\\YubiPay\\": "src/"
+        }
+    }
 }
