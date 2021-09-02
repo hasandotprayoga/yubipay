@@ -3,7 +3,7 @@
     "description": "A package to consume Yukbisnis Payment Service",
     "type": "library",
     "require": {
-        "guzzlehttp/guzzle": "^7.3"
+        "guzzlehttp/guzzle": "^6.3"
     },
     "license": "MIT",
     "authors": [
