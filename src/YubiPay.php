@@ -5,16 +5,24 @@ namespace Yukbisnis\YubiPay;
 class YubiPay extends Singleton
 {
 
-    public static function getChannel()
+    public static function getChannel($apiKey = null)
     {
-        $data = (new Channel)->get();
+        $data = (new Channel);
+        if (!is_null($apiKey)) {
+            $data->setApiKey($apiKey);
+        }
+        $data->get();
 
         return $data->getResponse();
     }
 
-    public static function createTransaction($attr = [])
+    public static function createTransaction($attr = [], $apiKey = null)
     {
-        $data = (new Transaction)->create($attr);
+        $data = (new Transaction);
+        if (!is_null($apiKey)) {
+            $data->setApiKey($apiKey);
+        }
+        $data->create($attr);
 
         return $data->getResponse();
     }
