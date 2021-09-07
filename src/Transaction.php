@@ -18,7 +18,7 @@ class Transaction extends Request
         if ($this->status == true) {
             $data = json_decode(json_encode($this->responseData));
 
-            $this->data = $data->response->results;
+            $this->data = $data->response->results[0];
         }
 
         return $this;
