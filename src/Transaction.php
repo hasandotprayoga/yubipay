@@ -28,7 +28,7 @@ class Transaction extends Request
     {
 
         $data = [
-            'externalId' => '',
+            'externalId' => $this->generateExternalId(),
             'email' => '',
             'phone' => '',
             'name' => '',
@@ -47,5 +47,10 @@ class Transaction extends Request
         }
 
         return $data;
+    }
+
+    public function generateExternalId()
+    {
+        return \Ramsey\Uuid\Uuid::uuid4();
     }
 }
