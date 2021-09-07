@@ -51,6 +51,6 @@ class Transaction extends Request
 
     public function generateExternalId()
     {
-        return \Ramsey\Uuid\Uuid::uuid4();
+        return \Ramsey\Uuid\Uuid::uuid4()->toString();
     }
 }
