@@ -37,7 +37,8 @@ class Transaction extends Request
             'amount' => '',
             'expirationDate' => '',
             'successRedirectUrl' => '',
-            'failurRedirectUrl' => ''
+            'failurRedirectUrl' => '',
+            'isPayFee' => ''
         ];
 
         foreach ($data as $k => $v) {
