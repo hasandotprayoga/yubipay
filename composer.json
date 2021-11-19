@@ -2,9 +2,7 @@
     "name": "yukbisnis/yubipay",
     "description": "A package to consume Yukbisnis Payment Service",
     "type": "library",
-    "require": {
-        "ramsey/uuid": "^4.2"
-    },
+    "require": {},
     "license": "MIT",
     "authors": [
         {
