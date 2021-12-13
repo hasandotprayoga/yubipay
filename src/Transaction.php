@@ -7,6 +7,23 @@ class Transaction extends Request
 
     protected $endpoint = '/v1/transaction';
 
+    public function status($invoice)
+    {
+
+        $this->setEndpoint('GET', $this->endpoint.'/'.$invoice.'/status');
+        $this->withAuth();
+
+        $this->hit();
+
+        if ($this->status == true) {
+            $data = json_decode(json_encode($this->responseData));
+
+            $this->data = $data->response->results[0];
+        }
+
+        return $this;
+    }
+
     public function create($attr = [])
     {
         $this->setEndpoint('POST', $this->endpoint);
